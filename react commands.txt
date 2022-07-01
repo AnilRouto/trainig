@@ -1,0 +1,62 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\Users\anil.routo\OneDrive - Brillio\Desktop\Training\Workspace\React\New Search Engine> npx create-react-app search-engine
+Need to install the following packages:
+  create-react-app
+Ok to proceed? (y) y
+
+Creating a new React app in C:\Users\anil.routo\OneDrive - Brillio\Desktop\Training\Workspace\React\New Search Engine\search-engine.
+
+Installing packages. This might take a couple of minutes.
+Installing react, react-dom, and react-scripts with cra-template...
+
+
+
+
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd search-engine
+  npm start
+
+Happy hacking!
+PS C:\Users\anil.routo\OneDrive - Brillio\Desktop\Training\Workspace\React\New Search Engine> cd search-engine
+Compiled successfully!
+
+You can now view search-engine in the browser.   
+
+  Local:            http://localhost:3000        
+  On Your Network:  http://192.168.0.106:3000    
+
+Note that the development build is not optimized.
+To create a production build, use npm run build. 
+
+
+npm install axios
+
+Alt+Shift+F
+
+  // "start": "set port 3500 & react-scripts start",--package.json
+  Testing
+  -------
+  npm install jest enzyme nyc --save-dev
+  
+  npm install enzyme-adapter-react-16@1.15.6 --save-dev --force
+  
+  npm install bootstrap react-bootstrap
+  
+  npm install log4js --save
+  npm install react-bootstrap --save

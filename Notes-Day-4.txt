@@ -1,0 +1,413 @@
+RULES FOR ONLINE SESSIONS
+
+1) Mute yourself all the time if nothing to discuss
+2) Unmute yourself (REMEMBER IT) while speaking
+3) Ask many questions but relevent questions to make it interactive 
+4) Use Chat box and Mike as your best friend for any communication
+5) Give answer to all the questions asked by trainer to have 100% participation
+6) Breaks -- 4:00 PM (15 minutes), 6:30 PM (15 minutes)
+7) Always leave a message once back from break in chat box
+
+
+Methodology
+  -- 20% time will go in theory/concepts (Day 1 expect more theory in first half)
+  -- 80% time will go in demos/examples
+
+
+SW Required
+ 1) JDK 8+
+ 2) STS Latest
+
+ 
+Prerequisites
+ 1) Developers having good Java experience upto verion 7
+ 2) Spring Framework knowledge is must
+ 3) Spring Boot knowledge is must
+
+
+Time To Start
+
+Q) Give me any 2 benefits of functional programming over OOP? 
+   Ans) Out of the box Concurreny, Flexibility, Dynamicity, Function is treated as data only
+Q) What is the difference in Java 1.0 IO streams and Java 8 streams?
+   Ans)	
+Q) Is there an object involved behind each lambda expression? Y/N
+   Ans) 
+Q) How many thread pools are there in Java 5? 1/2/3/4
+   Ans) 4
+Q) What is @Autowired annotation in Spring Framework?
+   Ans) Dependency Injection
+Q) What is @Component and @Service annotation in Spring Framework?
+   Ans) To deploy beans in IoC/Spring container
+Q) What is the purpose of @SpringBootApplication annotation in Spring Boot?
+   Ans) To create application context, to do lots of auto configurations, to use it as an entry point
+
+Type Inference
+ -- Java 8 compiler and runtime will infer the data type of the argument automatically from left side functional     interface signature
+
+Functional Programming
+  -- Functional Programming is more flexible and dynamic
+  -- Functional Programming always reduce line of code
+  -- Functional Programming promote inline coding and inline functionalities
+  -- Functional Programming is used to acheive behavioral injection
+  -- Functional Programming  has its own advantages over OOP
+  -- Functional language, function is a first hand citizen like Class is a first hand citizen in OOP languages
+  -- Java 8 introduced functional programming in Java 
+  -- Java 8 introduced a special syntax to acheive functional programming called lambda syntax
+  -- Java 8 introduced the concept of functional interface to acheive functional programming 
+
+ 
+Functional interface
+  -- Is an ordinary interface with one method only
+
+Functional pointer
+  -- Java 8 allows an ordinary old existing method to convert into a lambda expression automatically using function      pointer
+
+Lambda syntax
+  -- Is the syntax need to do inline implementation of these functional interfaces
+  -- is an implementation of any functional interface
+  -- Labmda should be used only when function is small size, one time only and inline only
+  -- (arg) -> {body}
+
+     //Standard function
+     public void hello(String name) {
+	System.out.println("Hello " +name);
+     }
+
+     //Lambda function
+     //Anonymous function
+     //Unnamed function
+     (String name) -> {
+	System.out.println("Hello " +name);
+	//500 LOC
+     }
+
+ 
+Java 8 Streams
+  -- These are streams designed to process objects and not IO byte based streams
+  -- These are objects streams 
+  -- These are designed to bring in Java data analysis capabilities
+  -- These are designed to get objects from collections
+  -- Collections only having data holding capabilities in memory with CRUD operations on data
+  -- Collections become data source for these Java 8 streams
+  -- Java 8 streams will open data pipelines
+  -- Java 8 streams are designed not to hold any data in memory 
+  -- Java 8 streams will pass all the way one single element until end of the pipeline before taking next element
+  -- Java 8 streams are very much memory efficient
+  -- Java 8 streams do not create in between any temporary arrays/list for intermediate data except for few operations
+  -- Java 8 streams are lazy by nature
+  -- Java 8 streams can be serial or parallel
+  -- Java 8 streams provide lots of operators needed by data analyst  
+      -- map, reduce, filter, take, skip, collect, sum, max, min, statics, foreach etc.....
+  -- Each Java 8 stream has two type of methods 
+            -- intermediate method
+                   --- each such method in turn returns another stream
+                   --- will never trigger the execution of stream
+            -- terminal method
+                   --- each such method will trigger the stream execution and may the stream in turn 
+  -- Java 8 streams have been designed abound functional interface available in java.util.function.*
+  -- Java 8 streams supports very much function chaining to make code more concise and better so that one can
+     focus on data analysis
+  -- Java 8 streams support push model
+ 
+
+Q) Can we use any standard Java method as a lambda expression? Y/N
+Q) Why it is allowed by Java 8, any advantages?
+Q) Is it mandatory to provide data type of parameters in a lambda function? Y/N
+Q) Is it mandatory to provide data type of return value in a lambda function? Y/N
+Q) Give me the name of a functional interface in java.util.function.* which take 2 parameters only and returns nothing?
+Q) Give me the name of a functional interface in java.util.function.* which take 1 parameter and returns 1 value?
+Q) Give me the name of 3 Old Java interfaces which are today functional interfaces?
+   Ans) Runnable, Comparable, Comparator 
+
+Q) Why streams are introduced in Java 8?
+Q) Streams make a copy of the data in memory before working on data? Y/N
+
+
+Reactive Application Development
+=======================================
+
+Reactive Programming
+  -- It is new way of application development by adopting a different programming style altogether
+  -- It is a style for building aplications by writing logic in asynchronous callback functions
+  -- It uses asynchronous, non-blocking, event driven approach to solve business proplems
+  -- It uses the above approach for doing data processing which is infinite and continous as streams/events
+  -- It is based on classical Pub Sub model but acheived different way 
+  -- Never do and expect program execution in sequence when writing code Reactive way
+  -- It is based on data and events which is always treated as observebales
+  -- Some observer is always watching these observables as continous data/event streams to consume form
+  -- Observers/Components will always react to changes happening in a data inside a stream
+  -- Reactive programming means building non-blocking code rather than blocking code
+  -- Reactive programming are good only for applications which are IO intensive or data intensive
+  -- Reactive programming are not good for applications which CPU intensive or standard CRUD applications
+  -- Reactive style of programming, user/request thread is always free for handling user calls/requests
+  -- Reactive style of programming, seperate worker therads are there where thet actual business logic handling is           delegated to a pool of limited workers
+
+
+Reactive Application Pillars
+  -- Responsive
+           --- Application component should always respond to all the events, no matter what in a timely manner
+  -- Resilient/FaultTolerant/Robust
+           --- Application should be designed to recover from failures automatically
+  -- Elastic/Scalable
+           --- Application should be able to scale up if traffic is more and scale down is traffic is less
+  -- Message Driven/Event Driven
+          --- Application components should always communicate asynchronously by sending and receiving               messages/events
+
+Reactive Menifesto
+  -- Reactive Menifesto is a group of which is deciding the future of reactive application and reactive trends
+  -- Reactive Menifesto already suggesting all the abobe mentioned points why any reactive application should
+     be designed based on 4 pillars
+  -- Reactive Menifesto already have a defined path for reactive streams
+
+
+Reactive Streams
+  -- It is a specification for building reactive applications considering Reactive Menifesto
+  -- These streams are based on Pub Sub model
+  -- These streams are mainly designed to cater to todays application demands
+  -- These streams are mainly designed to keep in mind large volume of data
+  -- These streams are by default non-blocking 
+  -- These streams are by default asynchronous 
+  -- These streams are by default event driven 
+  -- These streams allow to build on-demand consumers 
+  -- These streams by default supports concepts like back pressure, block production, drop data etc...
+  -- These streams are based on Deferred Pull-Push model
+  -- These streams are designed for dealing with communication problems between publisher of data and 
+     subscriber of data
+  -- These streams full control of subscribers like when to raise demand for more data, when to cancel the
+     subscription, when to deal with data drop problems, right signalling at right time from publiher etc..
+  -- These streams are already having a contract defined
+        --- org.reactivestreams.Publisher
+        --- org.reactivestreams.Subscriber
+        --- org.reactivestreams.Processor
+        --- org.reactivestreams.Subscription
+
+
+Q) Java 8 Streams vs Java 9 streams
+   
+   Java 8 streams
+       -- java.util.stream.*
+       -- talk about data analysis capabilities and no pub sub model
+       -- streams are not reactive 
+
+
+   Java 9 streams
+       -- java.util.concurrent.Flow.*
+       -- talk about communication capabalities between components of an application using pub sub model
+       -- streams are reactive 
+       -- are an implementation of Reactive Streams Specification
+
+
+Old Style (NoN Reactive Style of programming) 
+  --> Blocking
+  --> Sync
+  --> Deal with business problems
+  --> Caller can wait for result
+  --> Caller do not want to utilize full power of latest HW
+
+New Style of programming (Reactive Style of programming)
+  --> Non-Blocking
+  --> Async 
+  --> Deal with large data problems
+  --> Caller can not wait for result today
+  --> Caller want to utilize full power of latest HW
+
+
+Reactive Libraries available in Java to build reactive applications
+1) Java 9  -- Flow API
+2) RxJava  -- Observable,Flowable API
+3) Spring Reactor  -- Mono, Flux API
+4) Vert.x -- ???????
+5) Akka Streams -- ??????
+6) SmallRye -- ???????
+
+
+Exercise) Write a reactive application to create handle slow publisher and fast consumer while Car objects are being           published.
+          Note - 1) Make sure communication should be only by message passing
+ 		 2) Error sending from publisher to subscriber should be via signalling
+ 		 3) Errors should not be checked exceptions, avoid checked exceptions keeping in mind functional                             programming
+ 		 4) Do some data processing on car objects before publishing like mapping price to double,choosing 
+                    only those cars which are color black or send only unique cars to subscribers using Java 8 streams
+		 5) Also display if any message lost/dropped for a subscriber, subscriber must make an inventory
+                    of dropped messages. Learn and apply some mechanism from publisher to subscriber.
+ 		 6) Write all processed messages to File system using Java 7 NIO 2
+ 		 7) Use Custom thead pool, keeping in mind, number of subscribers may vary tomorrow
+ 		 8) Make subscribers flexible to simulate different behaviors like slow, fast, very fast etc..
+
+
+Project Reactor 
+  -- It is an intiative by Pivotal guys along with other guys like NetFlix,Apache and many more... 
+  -- It is a common reactive project/library created in line with Spring Framework
+  -- It is one more reactive library for all Java developers
+  -- It is very simple to understand and learn in compare to other libraries like Java 9, RxJava, Vert.x etc..
+  -- It provides simple to use publishers for day today activities
+  -- It provides 2 publishers (Reactive Data Types) only
+       --- Mono
+              -- can publish 0 or 1 element only
+       --- Flux
+              -- can publish 0 or N elements
+              -- is the one which is used to manage large volume of data using reactive stream
+              -- is a stream data type
+
+  -- It provides lots of reactive operators also along with reactive streams so publisher can do data processing before       publishing the items
+  -- It provides lots of reactive operators also along with reactive streams so subscriber can do data manipulation           after receiving it
+  -- It has been designed on top of Reactive Sreams Specification i.e. org.reactivestreams.*
+  -- It has been designed around java.util.function package to make it standard library to use with Java 8 officially
+  -- It has been built as a common project for all Spring projects to add reactive support there
+  -- Spring WebFlux is based on Project Reactor
+  -- Spring Reactive Data is based on Project Reactor
+  -- Spring Reactor support is available by default from Spring 5 onwards
+  -- Spring Reactor support is available by default from Spring Boot 2.5 onwards
+
+
+Q) Who controls data flow in a reactive application? Publisher/Subscriber
+   Ans) Subscriber
+Q) In old pub-sub applications, is it possible for one of the subscriber denying to receive messages from publisher       while other subscribers are receiving? 
+   Ans) Not Possible 
+Q) In old pub-sub applications, data flow starts from publisher to subscriber immediately? Y/N
+   Ans) Y
+Q) In old pub-sub applications, data is pushed by publisher to subscriber? Push/Pull Model
+   Ans) Push Model
+Q) What are the backpressure handling strategies supported by reactive streams today?
+   Ans) Drop Data, Latest Data Only, No Data, Buffer Full
+Q) What is backpressure handling?
+   Ans)  Subscriber will always raise a demand to publisher that now i am reday and I can handle only this much data so          give me that much data only
+
+
+Cold Publisher
+  -- is the one which will publish same set of data to all the subscribers
+  -- is the one which will publish all data to new subscribers also who just joined
+  -- is little static by data
+  -- always associated with some fixed data source
+
+Hot Publisher
+  -- is the one which will publish different data to different subscribers
+  -- is the one which will publish always latest data to different subscribers
+  -- is dynamic by data
+  -- associated with some live streams of data sources 
+
+
+Spring Web (MVC)
+   -- Each REST resource created always return standard Java type
+   -- Each REST resource created always accept stadard Java type
+   -- Each Controller is non reactive 
+   -- Each request comes will be given to a new thread and that thread will block and will wait for IO thread       to return value so that can be returned in response
+   -- Spring MVC application are deployed on non reactive Web servers always
+
+
+Spring Reactive Web (WebFlux)
+   -- It is the old Spring MVC framework with reactive data types originally existing in Reactor Project
+   -- Spring Reactive Web in completely based on reactive premiteves from Project Reactor
+   -- Spring Reactive Web has changed the internal architecture of Spring Web MVC
+   -- Spring Reactive Web has to run on a Web Server which is reactive like Netty, Undertow, Servlet 3.1 rather then           Tomcat
+   -- Spring Reactive Web application has to choose a container who is fully reactive and does not beleive in "per              user request" new thread policy
+   -- Spring Reactive Web should be written using Reactive HTTP APIs rather then old Servlet API
+   -- Each REST resource created must return reactive data type
+   -- Each REST resource created can/must accept reactive data type
+   -- Each Controller should be reactive 
+
+    
+Q) Operators provided by Reactive streams like filter,map,foreach etc.. runs in which thread? 
+   Ans) Worker Threads/IO Threads
+Q) Can we convert async non-blocking code to sync blocking code, is it suppoted by Reactive libraries? Y/N
+   Ans) Y
+Q) What is the difference in cold and hot publisher?
+   Ans) 1) Hot publisher is dynamic by data whereas Cold publisher is static
+	2) Hot publisher will only publish new and latest from live stream rather then old data also
+Q) What is the difference in Mono and Flux?
+   Ans) Mono only can publish 0-1 elements
+	Flux can publish 0-N elements
+Q) Can we mix and combine both into a single reactive stream? Y/N
+   Ans) Y
+Q) Give me any 4 differences reactive stream has from non-reactive streams?
+   Ans) Asynchronous, Non-Blocking, Event Driven, Backpressure Support, Flow of data managed by Subscriber, Defferred       Pull-Push model
+
+
+Use Case) Write a Spring based REST application which is fully reactive and does not block the incoming request
+          and does not make the incoming wait for the response to be ready and sitting and waiting there only.
+
+Some Quick REST API Testing Tools
+ --- Postman mini
+ --- YARC
+ --- CURL
+
+
+SSE 
+  -- Server Side Event
+  -- It is a mechanism for communication from Server to Client 
+  -- It is a mechanism which follows Push Model
+  -- It is a communication model to keep client uptodate with always live and latest data
+  -- It is a communication where client once connected to server side reactive streams, then client will be sent 
+     each event without any delay in real time
+  -- We can build fully responsive client and real time client with real time dashboard
+  -- This SSE evenets are connected to, from client side by using Web Socket technology
+  -- It is a good combination to use with those server side controllers which generate infinite evenets/data always 
+     to clients 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
